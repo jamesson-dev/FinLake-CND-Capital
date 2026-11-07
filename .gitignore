@@ -1,0 +1,32 @@
+# Dados e artefatos (nunca versionar — a camada raw e reconstruida pela ingestao)
+data/
+warehouse/
+target/
+logs/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# dbt
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+
+# Evidence / Node (Semana 4)
+bi/node_modules/
+bi/.evidence/
+
+# Scripts temporarios de setup
+_setup_*.sh
+_*.sh
+
+# SO / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

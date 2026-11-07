@@ -1,0 +1,31 @@
+[project]
+name = "finlake"
+version = "0.1.0"
+description = "FinLake CND Capital - camada de dados confiavel (CVM + BCB)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dbt-core>=1.12.6",
+    "dbt-duckdb>=1.11.1",
+    "duckdb>=2.0.0",
+    "httpx>=0.28.1",
+    "tenacity>=9.2.1",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+    "sqlfluff>=4.5.0",
+]
